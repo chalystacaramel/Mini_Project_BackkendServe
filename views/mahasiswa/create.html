@@ -1,0 +1,31 @@
+<h2 class="text-xl font-bold mb-4">
+    Tambah Mahasiswa
+</h2>
+
+<form method="POST" action="/mahasiswa/store">
+    <label class="block mb-1 font-semibold">Nama Mahasiswa</label>
+    <input name="nama" 
+           placeholder="Masukkan Nama Lengkap" 
+           class="border p-2 w-full mb-3" 
+           required>
+
+    <label class="block mb-1 font-semibold">Pilih Jurusan</label>
+    <select name="jurusan" class="border p-2 w-full mb-3" required>
+        <option value="">-- Pilih Jurusan --</option>
+        {{jurusan_options}}
+    </select>
+
+    <label class="block mb-1 font-semibold">Angkatan</label>
+    <input name="angkatan" 
+           type="number"
+           placeholder="Contoh: 2023" 
+           class="border p-2 w-full mb-3" 
+           required>
+
+    <div class="mt-4">
+        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
+            Simpan Data
+        </button>
+        <a href="/mahasiswa" class="ml-2 text-gray-500 hover:underline">Batal</a>
+    </div>
+</form>

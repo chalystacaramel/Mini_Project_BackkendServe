@@ -1,0 +1,17 @@
+<h2 class="text-xl font-bold mb-4">
+    Edit Mahasiswa
+</h2>
+<form method="POST" action="/mahasiswa/update/{{id}}">
+    <input name="nama" 
+           value="{{nama}}" 
+           class="border p-2 w-full mb-3">
+    <input name="jurusan" 
+           value="{{jurusan}}" 
+           class="border p-2 w-full mb-3">
+    <input name="angkatan" 
+           value="{{angkatan}}" 
+           class="border p-2 w-full mb-3">
+    <button class="bg-green-500 text-white px-4 py-2">
+        Update
+    </button>
+</form>
